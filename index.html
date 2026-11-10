@@ -2898,12 +2898,11 @@ function renderDash(){
   }).join(''):'<p style="color:var(--faint);font-size:13px">ยังไม่มีข้อมูลเครื่องดื่ม</p>';
 
   // running groups
-  const groups=['Group 1','Group 2','Group 3','Group 4','Working Teams'];
+  const groups=['Group 1','Group 2','Group 3','Working Teams'];
   const groupMeta={
     'Group 1':{label:'สีฟ้า',color:'#3B82F6'},
     'Group 2':{label:'สีเขียว',color:'#30A46C'},
     'Group 3':{label:'สีเหลือง',color:'#FACC15'},
-    'Group 4':{label:'สีส้ม',color:'#F59E0B'},
     'Working Teams':{label:'ทีมงาน',color:'#6B7280'}
   };
   document.getElementById('groupBreak').innerHTML=groups.map(gr=>{
@@ -2969,7 +2968,7 @@ function openAdd(){
     <div class="grid2"><label class="fld"><span>Position</span><input class="inp" id="fPosition"></label><label class="fld"><span>Function</span><input class="inp" id="fFunction"></label></div>
     <div class="grid2"><label class="fld"><span>E-Mail</span><input class="inp" id="fEmail"></label><label class="fld"><span>Mobile Phone</span><input class="inp" id="fTel"></label></div>
     <div class="grid2"><label class="fld"><span>ไซส์เสื้อ</span><input class="inp" id="fShirt" placeholder="S / M / L / XL"></label>
-      <label class="fld"><span>Running Group</span><select class="inp" id="fGroup"><option value="">- เลือก -</option><option>Group 1</option><option>Group 2</option><option>Group 3</option><option>Group 4</option><option>Working Teams</option></select></label></div>
+      <label class="fld"><span>Running Group</span><select class="inp" id="fGroup"><option value="">- เลือก -</option><option>Group 1</option><option>Group 2</option><option>Group 3</option><option>Working Teams</option></select></label></div>
     <div class="grid2"><label class="fld"><span>เครื่องดื่ม</span><input class="inp" id="fDrink"></label><label class="fld"><span>ระดับความหวาน</span><input class="inp" id="fSweet"></label></div>
     <div style="display:flex;gap:10px;margin-top:8px"><button class="btn btn-ghost full btn-sm" onclick="closeModal()">ยกเลิก</button><button class="btn btn-primary full btn-sm" onclick="doAdd()">เพิ่มและสร้าง QR</button></div>`);
   setTimeout(()=>document.getElementById('fName').focus(),50);
@@ -3086,7 +3085,6 @@ function runningGroupInfo(group){
     'Group 1':{color:'blue',thai:'สีฟ้า',en:'BLUE WRISTBAND'},
     'Group 2':{color:'green',thai:'สีเขียว',en:'GREEN WRISTBAND'},
     'Group 3':{color:'orange',thai:'สีส้ม',en:'ORANGE WRISTBAND'},
-    'Group 4':{color:'orange',thai:'สีส้ม',en:'ORANGE WRISTBAND'},
     'Working Teams':{color:'gray',thai:'ทีมงาน',en:'WORKING TEAM'}
   };
   return m[group]||null;
@@ -3462,7 +3460,6 @@ function saveManualEdit(){
           <option value="Group 1">Group 1 · สีฟ้า</option>
           <option value="Group 2">Group 2 · สีเขียว</option>
           <option value="Group 3">Group 3 · สีเหลือง</option>
-          <option value="Group 4">Group 4 · สีส้ม</option>
           <option value="Working Teams">Working Teams</option>
         </select>
       </label>
